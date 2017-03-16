@@ -1,46 +1,6 @@
-<?php
-
-$name = $_POST['name'];
-$e_no = $_POST['entnum'];
-$email = $_POST['email'];
-$date = $_POST['date'];
-$loc = $_POST['loc'];
-$loc_descp = $_POST['loc_descp'];
-$cat = $_POST['cat'];
-$sub_cat = $_POST['sub_cat'];
-$brand = $_POST['brand'];
-$model = $_POST['model'];
-$color = $_POST['color'];
-$item_descp = $_POST['item_descp'];
-
-$username = "user0";
-$password = "password";
-$database = "csp203_database";
-
-//$mysqli = new mysqli('localhost', $username, $password, $database) or die ("Unable to connect to database");
-
-mysql_connect(localhost,$username,$password);
-@mysql_select_db($database) or die ("Unable to select database");
-
-if(isset($_POST['submit']))
-{
-  echo "Good Job";
-}
-else 
-{
-  echo "Bad Job";
-}
-
-$query = "INSERT INTO lost_items VALUES ('','$name', '$cat', '$sub_cat', '$brand', '$model', '$color', '$item_descp', '$date', '$loc', '$loc_descp', '$email')";
-mysql_query($query);
-
-//mysql_close();
-
-?>
-
 <html>
 <head>
-   <title> Lost Item Form </title>
+   <title> Found Item Form </title>
    <link rel="stylesheet" type="text/css" href="/Lost_Found/css/style_lost.css" />
 
    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -96,9 +56,9 @@ mysql_query($query);
 </head>
 
 <body>  
-  <form action="/Lost_Found/inc/lostform.php" method="post">
-  <h1 id="lost">Report a Lost Item
-        <span id="lost_span">Please fill all the texts in the fields.</span>
+  <form action="foundform.php" method="post">
+  <h1 id="found">Report a Found Item
+        <span id = "found_span">Please fill all the texts in the fields.</span>
   </h1>
   <label>
      <span>Name :</span>
@@ -109,17 +69,13 @@ mysql_query($query);
      <input type="text" name="entnum"><br>
   </label>
   <label>
-     <span>E-mail :</span>
-     <input type="email" name="email"><br>
-  </label>
-  <label>
-     <span>Date Item was Lost : &nbsp; </span>
+     <span>Date Item was Found : &nbsp; </span>
      <br>
      <input id="datepicker" name="date"><br>
   </label>
 
   <label>
-     <span>Last Seen Location : &nbsp; </span>
+     <span>Found Location : &nbsp; </span>
      <br>
      <select id="loc" name="loc">
       <option value=""> </option>
@@ -139,7 +95,7 @@ mysql_query($query);
   <label> 
   <label>
      <span>Specific Location Description :</span>
-     <textarea class="input" rows="10" cols="10" name="loc_descp"></textarea>
+     <textarea class="input" rows="10" cols="10"></textarea>
   </label>
   <label>
      <span>Category : &nbsp; </span>
@@ -169,7 +125,7 @@ mysql_query($query);
   </label>
   <label>
      <span>Brief Description :</span>
-     <textarea class="input" rows="10" cols="10" name="item_descp"></textarea>
+     <textarea class="input" rows="10" cols="10"></textarea>
   </label>
   <label>
      <span>Color : &nbsp; </span>
@@ -183,7 +139,7 @@ mysql_query($query);
   </label>
     
   <br>
-  <input type="submit" name = "submit" value="SUBMIT">
+  <input type="Submit" value="SUBMIT">
   </form> 
 
 </body>

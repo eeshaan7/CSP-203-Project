@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC >
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/Lost and Found/css/style_target.css" />
+    <link rel="stylesheet" type="text/css" href="/Lost_Found/css/style_target.css" />
     <title>
       CSP 203 Project  </title>
   </head>
 
   <body>
     <div>
-      <img border="0" src="/Lost and Found/img/lost.png "  width=100% height="400" />
+      <img border="0" src="/Lost_Found/img/lost.png "  width=100% height="400" />
 
     </div>
     <ul >
@@ -18,8 +18,8 @@
 		<li class= "dropdown">
       <a href="#" class="dropbtn"><font size="6">Report</font></a>
       <div class="dropdown-content">
-        <a href="/Lost and Found/inc/lostform.php">Lost Item</a>
-        <a href="#">Found Item</a>
+        <a href="/Lost_Found/inc/lostform.php">Lost Item</a>
+        <a href="/Lost_Found/inc/foundform.php">Found Item</a>
       </div>
     </li>
     <li> <a href="#"> <font size="6">Report Bugs</font></a> </li>
