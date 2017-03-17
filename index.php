@@ -6,19 +6,19 @@
 
 		<title>Lost and Found</title>
 
-		<link rel="stylesheet" type="text/css" href="/Lost_Found/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 
 	<body>
     <div>
-    <img border="0" src="/Lost_Found/img/lost.png "  width=100% height="400" />
+    <img border="0" src="lost.png"  width=100% height="400" />
 
 	</div>
 	<div class="content">
 	<center>
 	  <h2>Welcome to official Lost and Found Portal of IIT Ropar</h2>
 	  <br>
-	  <img border="0" src="/Lost_Found/img/IIT_Ropar_Official_Logo.jpg "  width=40% height=60% />
+	  <img border="0" src="IIT_Ropar_Official_Logo.jpg "  width=40% height=60% />
 	  <br> <br>
 	  <h2>Please Login with your LDAP Credentials to continue</h2>
 	</center>	
@@ -40,7 +40,7 @@
             function check(form) { /*function to check userid & password*/
                 if(form.username.value == "user" && form.password.value == "password") {
                     /*location.replace("/Lost and Found/inc/target.php"); */
-                    window.open('/Lost_Found/inc/target.php')/*opens the target page if Id & password matches*/
+                    window.open('target.php')/*opens the target page if Id & password matches*/
                 	/*window.location.replace("/Lost and Found/inc/target.php");*/
                 }
                 else {

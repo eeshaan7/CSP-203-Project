@@ -10,48 +10,45 @@ $cat = $_POST['cat'];
 $sub_cat = $_POST['sub_cat'];
 $brand = $_POST['brand'];
 $model = $_POST['model'];
-$color = $_POST['color'];
 $item_descp = $_POST['item_descp'];
+$color = $_POST['color'];
 
 $username = "user0";
-$password = "password";
-$database = "csp203_database";
-
-//$mysqli = new mysqli('localhost', $username, $password, $database) or die ("Unable to connect to database");
+$password = "csl203lab";
+$database = "lab";
 
 mysql_connect(localhost,$username,$password);
 @mysql_select_db($database) or die ("Unable to select database");
 
-if(isset($_POST['submit']))
-{
-  echo "Good Job";
-}
-else 
-{
-  echo "Bad Job";
-}
-
-$query = "INSERT INTO lost_items VALUES ('','$name', '$cat', '$sub_cat', '$brand', '$model', '$color', '$item_descp', '$date', '$loc', '$loc_descp', '$email')";
+$query = "INSERT INTO Lost_Items VALUES ('','$name', '$e_no', '$email', '$date', '$loc', '$loc_descp', '$cat', '$sub_cat', '$brand', '$model', '$item_descp', '$color')";
 mysql_query($query);
 
-//mysql_close();
+mysql_close();
 
 ?>
 
 <html>
 <head>
    <title> Lost Item Form </title>
-   <link rel="stylesheet" type="text/css" href="/Lost_Found/css/style_lost.css" />
+   <link rel="stylesheet" type="text/css" href="style_lost.css" />
 
    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    
+   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker3.min.css">
     <script>
-      $(document).ready(function() {
-        $("#datepicker").datepicker();
-      });
+    $( document ).ready(function() {
+        $("#from-datepicker").datepicker({ 
+            format: 'yyyy-mm-dd'
+        });
+        $("#from-datepicker").on("change", function () {
+            var fromdate = $(this).val();
+            alert(fromdate);
+        });
+    });  
 
       function populate1(s1,s2) {
         var s1 = document.getElementById(s1);
@@ -96,7 +93,7 @@ mysql_query($query);
 </head>
 
 <body>  
-  <form action="/Lost_Found/inc/lostform.php" method="post">
+  <form action="lostform.php" method="post">
   <h1 id="lost">Report a Lost Item
         <span id="lost_span">Please fill all the texts in the fields.</span>
   </h1>
@@ -115,7 +112,7 @@ mysql_query($query);
   <label>
      <span>Date Item was Lost : &nbsp; </span>
      <br>
-     <input id="datepicker" name="date"><br>
+     <input type ="text" id="from-datepicker" name="date"><br>
   </label>
 
   <label>
