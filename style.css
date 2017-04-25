@@ -6,21 +6,10 @@ div.content{
   font-family: sans-serif;
   background-color: white;
   color:#3E3C3C;
-  margin-left: 50px;
+  margin-left: 200px;
   margin-top:  50px;
   width:800px;
   height:600px;
-  padding:20px;
-}
-
-div.login{
-  font-family: sans-serif;
-  background-color: white;
-  color:#3E3C3C;
-  margin-left: 950px;
-  margin-top: -640px;
-  width:500px;
-  height:300px;
   padding:20px;
 }
 
@@ -29,7 +18,7 @@ div.bottom{
   background-color: black;
   color:#3E3C3C;
   padding:20px;
-  margin-top: 450px;
+  margin-top: 50px;
 }
 
 #container {
@@ -50,6 +39,7 @@ form {
     margin: 0 auto;
     margin-top: 20px;
 }
+
 label {
     color: #555;
     display: inline-block;
@@ -69,15 +59,21 @@ p a {
     transition: all .4s ease;
 }
 
+
+
 p a:hover {
     color: #555;
 }
+
+
 
 input {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 12px;
     outline: none;
 }
+
+
 
 input[type=text],
 input[type=password] {
@@ -102,6 +98,8 @@ input[type=submit]:hover {
     background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
 
+
+
 input[type=submit]:active {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
     background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
@@ -114,10 +112,22 @@ input[type=submit]:active {
     height: 69px;
     margin-top: 20px;
 }
-input[type=checkbox] {
-    margin-left: 20px;
-    margin-top: 30px;
+
+a:link, a:visited {
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #5ECFD1;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
+
+a:hover, a:active {
+    background-color: #7C33C4;
+}
+
 .check {
     margin-left: 3px;
 }
@@ -134,7 +144,6 @@ input[type=submit] {
     background-color: #acd6ef; /*IE fallback*/
     background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
     background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
-
     background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
     border-radius: 30px;
     border: 1px solid #66add6;
@@ -177,4 +186,3 @@ td {
 background: #FAFAFA;
 text-align: center;
 }
-

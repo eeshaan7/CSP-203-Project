@@ -15,6 +15,10 @@ li {
     float: left;
 }
 
+.logout {
+    float: right;
+}
+
 li a, .dropbtn {
     display: inline-block;
     color: white;
@@ -60,8 +64,8 @@ div.content{
   color:#3E3C3C;
   margin-left: 350px;
   margin-top:  50px;
-  width:800px;
-  height:600px;
+  width:1200px;
+  height:400px;
   padding:20px;
 }
 
@@ -72,3 +76,30 @@ div.bottom{
   padding:20px;
   margin-top: 50px;
 }
+
+table {
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 1200px;
+border-collapse:
+collapse; border-spacing: 0;
+}
+
+td, th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s; /* Simple transition for hover effect */
+}
+
+th {
+background: #F23333; /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #DFDFDF;
+text-align: center;
+}
+
+h1 {margin:15px auto 10px auto; padding:0; font-size:2.4em; color:#2a7a9a; letter-spacing:-1px; line-height:1.2em;}
+
